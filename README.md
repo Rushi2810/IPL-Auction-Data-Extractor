@@ -24,7 +24,7 @@ This Python script extracts team information, specifically from the IPL auction 
 ## Screenshot
 The screenshot showcases the main interface of the IPL auction website, displaying team names, remaining funding, oversea player, and total player.
 
-![App Screenshot]("E:\Web Scraping\Tata IPL Auction 2024\pics\website_ss.png")
+![]("E:\Web Scraping\Tata IPL Auction 2024\pics\website_ss.png")
 
 
 ## Output
