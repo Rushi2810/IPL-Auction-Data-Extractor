@@ -4,13 +4,13 @@ import requests
 
 def extract_team_info(url):
   """
-  Extracts team information from the IPL auction website, focusing on Oversea Players.
+  Extracts team information from the IPL auction website.
 
   Args:
       url: The URL of the IPL auction webpage.
 
   Returns:
-      A list of dictionaries containing team information, including "Oversea Player".
+      A list of dictionaries containing team information.
   """
   response = requests.get(url)
   soup = BeautifulSoup(response.content, "lxml")
@@ -19,8 +19,7 @@ def extract_team_info(url):
   # Loop through team names and fund details
   for team_name, fund_details, total_player_element in zip(soup.find_all("div", class_="agv-team-name"),
                                      soup.find_all("div", class_="avg-fund-remaining"),
-                                     soup.find_all("li",class_="m-0 px-1")):
-    # Find oversea player element using text content filter (assuming case-insensitive)
+                                     soup.find_all("li",class_="m-0 px-1")):
     oversea_player_element = soup.find("li", class_="m-0")
     # Create team info dictionary with only relevant data
     teams_info = {
